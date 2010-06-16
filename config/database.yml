@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: soapbox_development
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: soapbox_test
+  pool: 5
+  timeout: 5000
