@@ -1,5 +1,4 @@
-require 'capybara/rails'
-include Capybara
+require 'spec_helper'
 
 context 'as a guest viewing the front page' do
 
