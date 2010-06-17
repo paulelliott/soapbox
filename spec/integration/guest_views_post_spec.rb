@@ -11,7 +11,6 @@ context 'as a guest viewing a specific post' do
   end
 
   it 'has a permalink url' do
-    pending
     current_url.should =~ /mind-blowing-shit/
   end
 
