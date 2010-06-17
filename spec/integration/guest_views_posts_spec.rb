@@ -35,11 +35,13 @@ context 'as a guest viewing the front page' do
 
   end
 
-  context 'my social links' do
+  context 'my info contains' do
 
-    it 'has a link to my twitter page'
+    it 'a short statement about me'
 
-    it 'has a link to my github page'
+    it 'a link to my twitter page'
+
+    it 'a link to my github page'
 
   end
 
