@@ -1,0 +1,1 @@
+require 'salty_slugs'
