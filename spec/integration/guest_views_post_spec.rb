@@ -2,15 +2,16 @@ require 'spec_helper'
 
 context 'as a guest viewing a specific post' do
 
-  let(:post) { Fabricate(:post, :title => 'Mind Blowing Shit') }
+  let(:post) { Fabricate(:post, :title => 'Mind Blowing Shit').save }
 
-  before do
+  before(:all) do
     post
     visit '/'
     click_link 'Mind Blowing Shit'
   end
 
   it 'has a permalink url' do
+    pending
     current_url.should =~ /mind-blowing-shit/
   end
 

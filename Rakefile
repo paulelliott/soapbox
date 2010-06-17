@@ -4,4 +4,12 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
+namespace :db do
+  namespace :test do
+    task :prepare do
+      # RSpec calls this even though we aren't using activerecord
+    end
+  end
+end
+
 Rails::Application.load_tasks

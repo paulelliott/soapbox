@@ -5,12 +5,12 @@ context 'as a guest viewing the front page' do
   context 'with 8 posts' do
 
     let(:recent_posts) do
-      Post.limit(5).order('published_on desc')
+      Post.limit(5).order_by([:published_on, :desc])
     end
 
-    before do
+    before(:all) do
       8.times do |i| #forces generation in reverse order
-        Fabricate(:post, :published_on => (10-i).days.ago, :content => 'a'*500)
+        Fabricate(:post, :published_on => (10-i).days.ago, :content => 'a'*500).save
       end
       visit '/'
     end
