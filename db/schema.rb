@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100617024513) do
+ActiveRecord::Schema.define(:version => 20100617033026) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20100617024513) do
     t.datetime "updated_at"
     t.string   "permalink"
     t.date     "published_on"
+    t.text     "content"
   end
 
   add_index "posts", ["permalink"], :name => "index_posts_on_permalink", :unique => true

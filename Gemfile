@@ -7,6 +7,7 @@ gem 'haml'
 gem 'will_paginate', '3.0.pre'
 gem 'fabrication'
 gem 'ffaker'
+gem 'bluecloth',        '2.0.7'
 
 group :test do
   gem 'rspec-rails', '2.0.0.beta.12'

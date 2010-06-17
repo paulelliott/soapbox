@@ -2,5 +2,6 @@
   .post
     %h3= link_to post.title, post_path(post)
     .published_on= post.published_on.to_s(:long)
+    .content= markdown(truncate(post.content, :length => 400))
 
 = will_paginate posts

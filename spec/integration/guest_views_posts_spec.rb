@@ -10,7 +10,7 @@ context 'as a guest viewing the front page' do
 
     before do
       8.times do |i| #forces generation in reverse order
-        Fabricate(:post, :published_on => (10-i).days.ago)
+        Fabricate(:post, :published_on => (10-i).days.ago, :content => 'a'*500)
       end
       visit '/'
     end
@@ -31,7 +31,11 @@ context 'as a guest viewing the front page' do
       end
     end
 
-    it 'displays an excerpt from each post'
+    it 'displays an excerpt from each post' do
+      recent_posts.each_with_index do |post, index|
+        page.should have_css(".post:nth-child(#{index+1}) .content", :text => "#{'a'*397}...")
+      end
+    end
 
   end
 
