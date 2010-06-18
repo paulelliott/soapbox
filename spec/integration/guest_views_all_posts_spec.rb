@@ -41,7 +41,9 @@ context 'as a guest viewing the front page' do
 
   context 'my info contains' do
 
-    it 'a short statement about me'
+    it 'about me section contains text' do
+      page.should have_css("#about_me", :text => "I like ice cream.")
+    end
 
     it 'a link to my twitter page'
 
