@@ -2,7 +2,7 @@ require 'spec_helper'
 
 context 'as a guest viewing a specific post' do
 
-  let(:post) { Fabricate(:post, :title => 'Mind Blowing Shit').save }
+  let(:post) { Fabricate(:post, :title => 'Mind Blowing Shit') }
 
   before(:all) do
     post

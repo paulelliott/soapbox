@@ -10,7 +10,7 @@ context 'as a guest viewing the front page' do
 
     before(:all) do
       8.times do |i| #forces generation in reverse order
-        Fabricate(:post, :published_on => (10-i).days.ago, :content => 'a'*500).save
+        Fabricate(:post, :published_on => (10-i).days.ago, :content => 'a'*500)
       end
       visit '/'
     end
