@@ -4,7 +4,7 @@ class Post
 
   field :permalink
   field :title
-  field :published_on, :type => Date
+  field :published_on, :type => Date, :default => lambda {Time.now}
   field :content
 
   index :permalink, :unique => true
