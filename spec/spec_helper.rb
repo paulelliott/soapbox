@@ -5,8 +5,6 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/dsl'
 
-require 'fabricators'
-
 include Capybara
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
