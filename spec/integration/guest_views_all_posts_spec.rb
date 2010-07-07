@@ -12,7 +12,7 @@ context 'as a guest viewing the front page' do
       8.times do |i| #forces generation in reverse order
         Fabricate(:post, :published_on => (10-i).days.ago, :content => 'a'*500)
       end
-      visit '/'
+      visit root_path
     end
 
     it 'displays 5 most recent posts in order of descending published date' do

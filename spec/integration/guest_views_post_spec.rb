@@ -8,7 +8,7 @@ context 'as a guest viewing a specific post' do
 
   before(:all) do
     post
-    visit '/'
+    visit root_path
     click_link 'Mind Blowing Shit'
   end
 
