@@ -45,16 +45,6 @@ context 'as a guest viewing the front page' do
       page.should have_css("#about_me", :text => "I like ice cream.")
     end
 
-    it 'link to my twitter page' do
-      page.should have_css("#twitter_link[href*='test_twitter_name']")
-    end
-
-    it 'link to my github page' do
-      #page.should have_css("#github-badge[href*='test_github_name']")
-      page.should have_css("#github-badge")
-    end
-
-
   end
 
 end
