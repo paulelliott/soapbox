@@ -12,8 +12,8 @@ gem 'ffaker'
 gem 'bluecloth',        '2.0.7'
 
 group :test do
+  gem 'capybara',       '0.3.9'
   gem 'rspec-rails',    '2.0.0.beta.12'
-  gem 'capybara',       '0.3.8'
   gem 'launchy'
 end
 
